@@ -166,7 +166,7 @@ span {
   max-width: 300px;
 }
 
-.menu-header__list {
+.menu__list {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
