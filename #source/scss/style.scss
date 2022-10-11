@@ -1,0 +1,362 @@
+//FONTS
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+
+@font-face {
+	font-family: "LavishlyYours";
+	src: url("../fonts/LavishlyYours-Regular.woff2") format("woff2"), url("../fonts/LavishlyYours-Regular.woff") format("woff");
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+body{
+	
+	font-family:"Caveat";
+	color: #000000;
+	font-weight: 400;
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+
+
+	
+}
+
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.page {
+	flex: 1 1 auto;
+}
+
+[class*="__container"]{
+		max-width: 1030px;
+		padding: 0px 15px;
+		margin: 0 auto;
+}
+
+.text{
+	text-indent: 20px;
+	flex: 1 1 auto;
+			font-size: 17px;
+			line-height: 1.2;
+			& p{
+				&:not(:last-child){
+					margin-bottom: 15px;
+				}		
+			}
+}
+
+.txt-image{
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			
+}
+
+span{
+	font-size: 40px;
+	font-weight: 900;
+	color: #FF6428;
+	font-family:"LavishlyYours";
+	
+}
+
+// ---------------------HEADER-------------------
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	&__container {
+		padding-top: 25px;
+		padding-bottom: 5px;
+		display: flex;
+		gap: 60px;
+		align-items: center;
+		min-height: 100px;
+		justify-content: space-between;
+		@media(max-width:890px){
+			flex-wrap: wrap;
+			gap: 30px;
+			justify-content: center;
+		}
+		@media(max-width:767.98px){
+			gap: 10px;
+		}
+		
+	}
+
+	&__logo {
+		border-radius: 15px;
+		overflow: hidden;
+		& img{
+			max-width: 300px;
+			
+		}
+		
+	}
+	
+
+
+
+
+}
+.menu-header {
+
+	&__list {
+		display: flex;
+		gap: 40px;
+		flex-wrap: wrap;
+		@media(max-width:767.98px){
+			gap: 15px;
+		}
+		@media(max-width:479px){
+			gap: 10px;
+		}
+	}
+}
+.menu {
+
+	&__item {
+		
+	}
+
+	&__link {
+		font-family:"LavishlyYours";
+		font-weight: 700;
+		font-size: 19px;
+		line-height: 160%;
+		transition: all 0.3s ease 0s;
+		color: #424551;
+		&:hover{
+		color: #FF6428;
+		text-decoration: underline;
+		}
+	}
+
+	&__link--active {
+		color: #FF6428;
+	}
+}
+
+// ------------------PAGE-HOLMES-------------------
+
+
+.page {
+	padding-top: 130px;
+	
+		&__holmes {
+			
+		}
+}
+.holmes {
+
+		&__container {
+		}
+
+		&__content {
+			padding: 0px 25px;
+		}
+
+		&__title {
+			font-size: 35px;
+			font-weight: 600;
+			margin-bottom: 25px;
+			text-shadow: 5px 3px 5px #424551;
+			text-transform: uppercase;
+			font-family:"LavishlyYours";
+			word-spacing: 40px;
+			text-align: center;
+			letter-spacing: 7px;
+			
+		}
+
+		&__row-1 {
+			padding-bottom: 80px;
+		}
+}
+.row-1-holmes {
+	display: flex;
+	gap: 80px;
+		&__text {
+			flex: 1 1 auto;
+			font-size: 17px;
+			line-height: 1.2;
+			& p{
+				&:not(:last-child){
+					margin-bottom: 15px;
+				}
+				
+			}
+		}
+
+		&__scarlet {
+			color: rgba(164, 66, 0, 0.858);
+			text-decoration: underline;
+		}
+
+		&__txt-image {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+		}
+
+		
+		&__image {
+			flex: 0 1 252px;
+			box-shadow: 5px 3px 5px #424551;
+			overflow: hidden;
+		}
+
+		&__subtext {
+			font-size: 20px;
+			font-weight: 500;
+			text-align: right;
+			text-transform: capitalize;
+			opacity: 0.4;
+			line-height: 0.9;
+		}
+}
+
+
+
+
+// -------------------2----------------
+
+.holmes {
+	
+	&__row-2 {
+		padding-bottom: 80px;
+		
+	}
+}
+.row-2-holmes {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 80px;
+	&__text {
+		flex: 1 1 auto;
+	}
+
+	&__txt-image {
+	}
+
+	&__image {
+		flex: 0 1 252px;
+		box-shadow: 5px 3px 5px #424551;
+		overflow: hidden;
+	}
+
+	&__subtext {
+		font-size: 20px;
+		font-weight: 500;
+		text-align: left;
+		text-transform: capitalize;
+		opacity: 0.4;
+		line-height: 0.9;
+	}
+}
+
+
+// -------------------3------------------------
+
+.holmes {
+
+	&__row-3 {
+		padding-bottom: 35px;
+	}
+}
+.row-3-holmes {
+	display: flex;
+	gap: 80px;
+	&__text {
+		flex: 1 1 auto;
+	}
+
+	&__txt-image {
+		
+	}
+
+	&__image {
+		max-width: 270px;
+		box-shadow: 5px 3px 5px #424551;
+		overflow: hidden;
+		
+	}
+
+	&__subtext {
+		font-size: 20px;
+		font-weight: 500;
+		text-align: center;
+		text-transform: capitalize;
+		opacity: 0.4;
+		line-height: 0.9;
+	}
+}
+
+
+// -----------buttons----------------
+
+.holmes {
+
+	&__buttons {
+		display: flex;
+		gap: 50px;
+		margin-bottom: 50px;
+	}
+
+	&__button {
+		border: 1px solid rgba(0, 189, 50, 0.759);
+		border-radius: 5px;
+		background-color: #FF6428;
+		padding: 10px 15px;
+		font-size: 17px;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			background-color: #04e8e487;
+			
+		}
+		
+	}
+
+	&__btn {
+		color: aliceblue;
+		&:hover{
+			color: #424551;
+		}
+		
+	}
+}
+
+// -------------footer-----------------
+
+.footer {
+	background-color: #7d2603ac;
+	
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 60px;
+		color: aliceblue;
+	}
+}
